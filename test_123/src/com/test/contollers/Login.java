@@ -8,6 +8,7 @@ import javax.ws.rs.core.MediaType;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -27,7 +28,7 @@ public class Login {
 		}		
 	}
 	@RequestMapping(value="/login",method=RequestMethod.GET,produces=MediaType.APPLICATION_JSON)
-	@ResponseStatus
+	@ResponseBody
 	public User login(){
 		System.out.println("i  am hit");
 		User u1=new User();
